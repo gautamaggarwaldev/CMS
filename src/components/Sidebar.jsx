@@ -12,7 +12,7 @@ function Sidebar() {
 
   return (
     <div className="w-1/4 h-screen bg-gray-900 text-white flex flex-col p-6 shadow-lg fixed left-0 top-0 bottom-0">
-      <h2 className="text-xl font-bold mb-6">CMS Portal</h2>
+      <h2 className="text-xl font-bold mb-6">Content Core</h2>
       <nav>
         <ul className="space-y-4">
           {user ? (
