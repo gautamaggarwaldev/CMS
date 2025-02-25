@@ -54,8 +54,6 @@ function AddContent() {
 
   return (
     <div className="flex h-screen w-full">
-      {/* Sidebar Spacer */}
-      <div className="w-1/4"></div>
       {/* Main Content */}
       <div className="w-3/4 p-8 bg-gray-100 ml-[25%]">
         <h2 className="text-2xl font-bold text-gray-800 mb-6">Add Content</h2>
