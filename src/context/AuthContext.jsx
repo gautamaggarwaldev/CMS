@@ -15,14 +15,18 @@ export default function AuthProvider({ children }) {
     }, [users]);
 
     const login = (username, password) => {
-        const found = users.find((u) => {
-            return u.username === username && u.password === password;
-        }) 
+        const foundUsername = users.find((u) => (u.username === username));
+        if(!foundUsername) {
+            return {success: false, message: "Username not found"};
+        }
+        
+        const found = users.find((u) => (u.username === username && u.password === password));
+        
         if(found) {
             setUser({username});
-            return true;
+            return {success: true};
         }
-        return false;
+        return {success: false, message: "Password is incorrect"};;
     }
 
     const signup = (username, password) => {
